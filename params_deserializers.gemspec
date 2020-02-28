@@ -42,7 +42,7 @@ Gem::Specification.new do |s|
 
   s.files = Dir['lib/**/*', 'Rakefile', 'README.md']
 
-  s.add_dependency 'activesupport', '>= 3.2.16', '< 5.0'
+  s.add_dependency 'activesupport'
 
   s.add_development_dependency 'guard-rspec'
   s.add_development_dependency 'sqlite3'

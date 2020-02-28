@@ -54,8 +54,7 @@ describe 'deserialize_params_with', type: :controller do
 
     it 'gets deserialized params when calling the deserialized_params getter' do
       routes.draw { get 'update' => 'anonymous#update' }
-      put :update, foo: 'bar', baz: 'quux'
-
+      put :update, params: {foo: 'bar', baz: 'quux'}
       expected = { foo: 'bar' }.with_indifferent_access
       expect(controller.deserialized_params).to eql expected
     end
